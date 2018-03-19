@@ -1,2 +1,7 @@
-# ros-works-dojos
-Repositório destinado aos Dojos de programação ROS-Works.
+# Dojo de Programação ROS-Works
+
+Bem vindos ao repositório oficial do Dojo de Programação ROS Works, promovido pelo capitulo IEEE Control Systems Society UnB.
+
+### Edições Planejadas
+* TurtleSim & rospy
+  * Expectativa (Abril 2018)

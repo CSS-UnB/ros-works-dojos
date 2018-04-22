@@ -1,5 +1,29 @@
 #!/usr/bin/env python
-# coding: utf-8
+# -*- coding: utf-8 -*-
+''' Dojo: Controle de Malha Aberta da Tartaruga
+
+Bem vindos ao dojo de programação ROS-Works.
+
+Objetivo:
+    Desenvolver algoritimos de controle de malha aberta no ambiente Turtlesim.
+    O dojo deve se desenvolver em duas etapas: coordenadas relativas e coordenadas absolutas.
+
+Materiais:
+    Este é o código fonte principal com que vocês devem trabalhar hoje.
+    Como ponto de partida, deixamos prontos os arquivos turtle_kinematics.py e turtle_open_loop_node.py
+    Eles tratam, respectivamente, das funcionalidades de movimentação da tartaruga em ambiente ROS
+    e da função principal que realiza a chamada deste arquivo.
+
+Métodologia e Resultados Esperados:
+    Desenvolver o código fonte das funções TurtleOpenLoop.go_to_point_relative(...) e TurtleOpenLoop.go_to_point_absolute(...).
+    Sintam-se à vontade para desenvolver métodos e criar variáveis auxiliares para esta tarefa.
+    Fique atento, pois já existem algumas dicas no código da classe TurtleOpenLoop.
+
+Autores:
+    - Pedro Henrique S. Perruci - 14/0158596 - Eng. Mecatrônica
+    - (...)
+'''
+
 
 import rospy
 from turtlesim.msg import Pose
@@ -10,7 +34,7 @@ from turtle_kinematics import TurtleKinematics
 class TurtleOpenLoop(TurtleKinematics):
     ''' Classe para o controle em malha aberta da tartaruga.
     O movimento da tartaruga deve se basear na cinematica classica:
-        Deslocamento = Velcidade x Tempo
+    - Deslocamento = Velcidade x Tempo
     '''
     def __init__(self):
         ''' Construtor da classe TurtleOpenLoop

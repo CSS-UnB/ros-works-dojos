@@ -19,6 +19,9 @@ Métodologia e Resultados Esperados:
     Sintam-se à vontade para desenvolver métodos e criar variáveis auxiliares para esta tarefa.
     Fique atento, pois já existem algumas dicas no código da classe TurtleOpenLoop.
 
+Instruções de Execução:
+    roslaunch ros-works-dojos ps_dia_1.launch
+
 Autores:
     - Pedro Henrique S. Perruci - 14/0158596 - Eng. Mecatrônica
     - (...)

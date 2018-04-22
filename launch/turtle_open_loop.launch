@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim_node"/>
+    <node pkg="ros-works-dojos" type="turtle_open_loop_node.py" name="turtle_open_loop_node" output="screen"/>
+</launch>

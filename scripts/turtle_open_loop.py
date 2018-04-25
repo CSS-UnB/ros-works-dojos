@@ -24,7 +24,7 @@ Instruções de Execução:
 
 Autores:
     - Pedro Henrique S. Perruci - 14/0158596 - Eng. Mecatrônica
-    - (...)
+    - Lukas Lorenz de Andrade -16/0135109 - Eng Mecatrônica
 '''
 
 
@@ -72,7 +72,12 @@ class TurtleOpenLoop(TurtleKinematics):
         ''' Recebe ponto relativo a tartaruga em 2D e vai ate o ponto.
         Dica: tente primeiro o movimento angular e depois o linear.
         '''
-        pass
+        t_x = x/vel_lin
+        t_y = y/vel_lin
+        t_rot = 0.5*math.pi/vel_ang
+        self.move_untill(t_x, vel_lin, 0)
+        self.move_untill(t_rot, 0, vel_ang)
+        self.move_untill(t_y, vel_lin, 0)
 
     def go_to_point_absolute(self, x, y, vel_lin=0.5, vel_ang=0.5):
         ''' Movimenta tartaruga até coordenadas x e y absolutas

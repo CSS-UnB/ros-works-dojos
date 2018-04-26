@@ -19,14 +19,14 @@ class TurtleKinematics:
         vel_msg = Twist()
         vel_msg.angular.z = vel
         self.pub_vel.publish(vel_msg)
-        turtle.rate.sleep()
+        self.rate.sleep()
 
     def move_linear(self, vel):
         ''' Cria e envia mensagem de velocidade linear '''
         vel_msg = Twist()
         vel_msg.linear.x = vel
         self.pub_vel.publish(vel_msg)
-        turtle.rate.sleep()
+        self.rate.sleep()
 
     def move_general(self, vel, ang):
         ''' Recebe velocidades linear e angular para movimentar a tartaruga '''

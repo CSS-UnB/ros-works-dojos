@@ -64,7 +64,7 @@ class TurtleClosedLoop(TurtleKinematics):
         self.turtle_angular_velocity = msg.angular_velocity
         # print 'x = ',self.turtle_x,'\ny = ',self.turtle_y
 
-    def go_to_point(self, x, y, vel=1, kp=1, tolerance=0.1):
+    def go_to_point(self, x, y, vel=0.1, kp=5, tolerance=0.01):
         '''
             Recebe ponto, vai ao ponto.
             Realize um controle proporcional de malha fechada para a movimentacao da tartaruga.
@@ -78,4 +78,14 @@ class TurtleClosedLoop(TurtleKinematics):
                 Uma solucao possivel e realizar o controle proporcional apenas na orientacao da tartaruga,
                 enquanto a velocidade linear mantem-se constante.
         '''
+        # checar erro
+        erro_atual = math.sqrt((x - self.turtle_x)**2 + (y - self.turtle_y)**2)
+        while erro_atual > tolerance:
+            # houvendo erro, move a tartaruga
+            self.move_linear(vel)
+            omega = math.atan2(y-self.turtle_y, x-self.turtle_x) - self.turtle_theta
+            print(omega)
+            self.move_angular(omega * vel * kp)
+            erro_atual = math.sqrt((x - self.turtle_x)**2 + (y - self.turtle_y)**2)
+
         self.stop()

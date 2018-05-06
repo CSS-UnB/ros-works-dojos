@@ -5,8 +5,8 @@ Bem vindos ao repositório oficial do Dojo de Programação ROS Works, promovido
 ### Processo Seletivo IEEE CSS
 - Dia 1 (25/04/2018)
     - Desenvolver funções de controle de malha aberta no simulador Turtlesim
-    - Arquivo fonte: scripts/turtle\_open\_loop.py
+    - Arquivo fonte: [scripts/turtle\_open\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_open_loop.py)
 
 - Dia 2 (26/04/2018)
     - Desenvolver funções de controle de malha aberta no simulador Turtlesim
-    - Arquivo fonte: scripts/turtle\_closed\_loop.py
+    - Arquivo fonte: [scripts/turtle\_closed\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_closed_loop.py)

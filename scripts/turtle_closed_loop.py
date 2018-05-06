@@ -23,7 +23,9 @@ Instruções de Execução:
 
 Autores:
     - Pedro Henrique S. Perruci - 14/0158596 - Eng. Mecatrônica
-    ...
+    - Cristiano Alves da Silva Junior - Eng. Mecatronica
+    - Marina Prado Lenza - 140027998 - Eng. Eletrica
+    - Lukas Lorenz de Andrade - 160135109 - Eng. Mecatronica
 '''
 
 import rospy

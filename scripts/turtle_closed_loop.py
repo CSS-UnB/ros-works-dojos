@@ -66,7 +66,7 @@ class TurtleClosedLoop(TurtleKinematics):
         self.turtle_angular_velocity = msg.angular_velocity
         # print 'x = ',self.turtle_x,'\ny = ',self.turtle_y
 
-    def go_to_point(self, x, y, vel=0.1, kp=5, tolerance=0.01):
+    def go_to_point(self, x, y, vel=1, kp=5, tolerance=0.01):
         '''
             Recebe ponto, vai ao ponto.
             Realize um controle proporcional de malha fechada para a movimentacao da tartaruga.

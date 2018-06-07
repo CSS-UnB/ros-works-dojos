@@ -5,18 +5,34 @@ Bem vindos ao repositório oficial do Dojo de Programação ROS Works, promovido
 ### Processo Seletivo IEEE CSS
 - Dia 1 (25/04/2018)
     - Desenvolver funções de controle de malha aberta no simulador Turtlesim
-    - Arquivo fonte: [scripts/turtle\_open\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_open_loop.py)
+    - Arquivo fonte: [dojo_ps_css/turtle\_open\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_open_loop.py)
 
 - Dia 2 (26/04/2018)
     - Desenvolver funções de controle de malha aberta no simulador Turtlesim
-    - Arquivo fonte: [scripts/turtle\_closed\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_closed_loop.py)
+    - Arquivo fonte: [dojo_ps_css/turtle\_closed\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/scripts/turtle_closed_loop.py)
 
-### Testes Unitarios
+### Testes de Unitarios
 Para adicionar testes unitarios, deve-se adiciona-los a pasta
 ```
-    test/
+    [dojo_folder]/test/
+```
+e verificar se existe a diretiva no arquivo CMakeLists.txt:
+```
+    catkin_add_nosetests([dojo_folder]/test/)
 ```
 Ao compilar o workspace, e necessaria a chamada:
 ```
     catkin build --catkin-make-args run_tests
+```
+
+
+### Testes de Instegracao
+Testes de integracao possuem uma sintaxe semelhante a launch files.
+Eles devem ser armazenados na pasta
+```
+    test/
+```
+e, apos compilados, chamados pela funcao
+```
+    rostest ros-works-dojo [testname.test]
 ```

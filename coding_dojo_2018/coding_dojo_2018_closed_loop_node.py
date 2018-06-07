@@ -28,7 +28,7 @@ def print_position_error(monitor):
 
 def main():
     ''' Nó executável para o controle em malha fechada '''
-    rospy.init_node('dojo_css_closed_loop')
+    rospy.init_node('coding_dojo_2018_closed_loop')
 
     turtle = turtle_closed_loop.TurtleClosedLoop()
     monitor = position_monitor.PositionMonitor()

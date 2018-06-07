@@ -158,6 +158,8 @@ include_directories(
 install(PROGRAMS
   dojo_ps_css/turtle_open_loop_node
   dojo_ps_css/turtle_closed_loop_node
+  coding_dojo_2018/coding_dojo_2018_open_loop_node
+  coding_dojo_2018/coding_dojo_2018_closed_loop_node
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

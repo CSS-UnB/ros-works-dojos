@@ -86,7 +86,6 @@ class TurtleClosedLoop(TurtleKinematics):
             # houvendo erro, move a tartaruga
             self.move_linear(vel)
             omega = math.atan2(y-self.turtle_y, x-self.turtle_x) - self.turtle_theta
-            print(omega)
             self.move_angular(omega * vel * kp)
             erro_atual = math.sqrt((x - self.turtle_x)**2 + (y - self.turtle_y)**2)
 

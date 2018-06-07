@@ -20,6 +20,7 @@ class PositionMonitor:
         self.turtle_linear_velocity = msg.linear_velocity
         self.turtle_angular_velocity = msg.angular_velocity
         # print 'x = ',self.turtle_x,'\ny = ',self.turtle_y
+        rospy.spin()
 
     def set_target_coordinates(self, x, y):
         ''' Informa posicao destino do movimento

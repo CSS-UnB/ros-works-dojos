@@ -67,6 +67,7 @@ class TurtleClosedLoop(TurtleKinematics):
         self.turtle_linear_velocity = msg.linear_velocity
         self.turtle_angular_velocity = msg.angular_velocity
         # print 'x = ',self.turtle_x,'\ny = ',self.turtle_y
+        rospy.spin()
 
     def go_to_point(self, x, y, vel=1, kp=5, tolerance=0.01):
         ''' [Coding Dojo!]

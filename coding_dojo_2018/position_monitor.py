@@ -39,12 +39,15 @@ class PositionMonitor:
     def get_goal_position(self):
         return self.target_position_x, self.target_position_y
 
+    def module_difference(self, diff_x, diff_y):
+        return math.sqrt(diff_x**2 + diff_y**2)
+
     def get_final_position_error(self):
         ''' Compara-se a posicao atual com aquela guardada em self.target_position_x e self.target_position_y '''
         diff_x = self.target_position_x - self.turtle_x
         diff_y = self.target_position_y - self.turtle_y
         # get their module difference
-        abs_diff = math.sqrt(diff_x**2 + diff_y**2)
+        abs_diff = self.module_difference(diff_x, diff_y)
         return abs_diff, diff_x, diff_y
 
     def get_relative_position_error(self):
@@ -54,5 +57,5 @@ class PositionMonitor:
         diff_x = relative_target_x - self.turtle_x
         diff_y = relative_target_y - self.turtle_y
         # get their module difference
-        abs_diff = math.sqrt(diff_x**2 + diff_y**2)
+        abs_diff = self.module_difference(diff_x, diff_y)
         return abs_diff, diff_x, diff_y

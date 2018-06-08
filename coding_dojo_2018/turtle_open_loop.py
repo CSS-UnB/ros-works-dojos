@@ -18,6 +18,9 @@ Métodologia e Resultados Esperados:
     Desenvolver por meio de TDD o código fonte das funções TurtleOpenLoop.go_to_point_relative(...) e TurtleOpenLoop.go_to_point_absolute(...).
     Sintam-se à vontade para desenvolver métodos e criar variáveis auxiliares para esta tarefa.
 
+Desafios Extra:
+    Hora de desenhar! Crie testes e funcoes para a tartaruga desenhar um quadrado, um triangulo e um circulo.
+
 Chamada de Testes Unitarios:
     catkin build --catkin-make-args run_tests
 

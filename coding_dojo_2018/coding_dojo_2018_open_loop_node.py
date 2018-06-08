@@ -30,6 +30,14 @@ def print_position_error(monitor):
     print 'Y Position Error: ', diff_y
     print 'Absolute Position Error: ', abs_diff
 
+def print_relative_error(monitor):
+    abs_diff, diff_x, diff_y = monitor.get_relative_position_error()
+    print 'Turtle position:', monitor.get_actual_position()
+    print 'Relative Goal position:', monitor.get_relative_goal_position()
+    print 'X Position Error: ', diff_x
+    print 'Y Position Error: ', diff_y
+    print 'Absolute Position Error: ', abs_diff
+
 def main():
     ''' Nó executável para o controle em malha aberta '''
     rospy.init_node('coding_dojo_2018_open_loop')
@@ -40,7 +48,9 @@ def main():
             choice, coord_x, coord_y = print_menu()
             if choice == 1:
                 ''' Relative coordinates '''
+                monitor.set_target_coordinates(coord_x, coord_y)
                 turtle.go_to_point_relative(coord_x, coord_y)
+                print_relative_error(monitor)
             if choice == 2:
                 ''' Absolute coordinates '''
                 monitor.set_target_coordinates(coord_x, coord_y)

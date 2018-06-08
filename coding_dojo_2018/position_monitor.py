@@ -39,6 +39,12 @@ class PositionMonitor:
     def get_goal_position(self):
         return self.target_position_x, self.target_position_y
 
+    def get_relative_goal_position(self):
+        ''' Returns relative ending position, when compared to initial position '''
+        relative_target_x = self.initial_position_x + self.target_position_x
+        relative_target_y = self.initial_position_y + self.target_position_y
+        return relative_target_x, relative_target_y
+
     def module_difference(self, diff_x, diff_y):
         return math.sqrt(diff_x**2 + diff_y**2)
 
@@ -52,8 +58,7 @@ class PositionMonitor:
 
     def get_relative_position_error(self):
         ''' Compara a posicao atual com a posicao final relativa a inicial '''
-        relative_target_x = self.initial_position_x + self.target_position_x
-        relative_target_y = self.initial_position_y + self.target_position_y
+        relative_target_x, relative_target_y = self.get_relative_goal_position()
         diff_x = relative_target_x - self.turtle_x
         diff_y = relative_target_y - self.turtle_y
         # get their module difference

@@ -53,6 +53,18 @@ class TestPositionMonitor(object):
         self.monitor.set_target_coordinates(0, 0)
         assert_equal(self.monitor.get_relative_position_error(), (0, 0, 0))
 
+    def test_RelativePositionError_1x(self):
+        ''' Relative position error test: emulate initial position (1,1), final relative position (0,0). Expects (0, 0, 0) '''
+        self.monitor.turtle_x, self.monitor.turtle_y = 1, 1
+        self.monitor.set_target_coordinates(1, 0)
+        assert_equal(self.monitor.get_relative_position_error(), (1, 1, 0))
+
+    def test_RelativePositionError_1y(self):
+        ''' Relative position error test: emulate initial position (1,1), final relative position (0,0). Expects (0, 0, 0) '''
+        self.monitor.turtle_x, self.monitor.turtle_y = 1, 1
+        self.monitor.set_target_coordinates(0, 1)
+        assert_equal(self.monitor.get_relative_position_error(), (1, 0, 1))
+
 if __name__ == '__main__':
     import rosunit
     rosunit.unitrun(PKG, 'test_position_monitor', TestBareBones)

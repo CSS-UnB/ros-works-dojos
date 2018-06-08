@@ -46,3 +46,13 @@ class PositionMonitor:
         # get their module difference
         abs_diff = math.sqrt(diff_x**2 + diff_y**2)
         return abs_diff, diff_x, diff_y
+
+    def get_relative_position_error(self):
+        ''' Compara a posicao atual com a posicao final relativa a inicial '''
+        relative_target_x = self.initial_position_x + self.target_position_x
+        relative_target_y = self.initial_position_y + self.target_position_y
+        diff_x = relative_target_x - self.turtle_x
+        diff_y = relative_target_y - self.turtle_y
+        # get their module difference
+        abs_diff = math.sqrt(diff_x**2 + diff_y**2)
+        return abs_diff, diff_x, diff_y

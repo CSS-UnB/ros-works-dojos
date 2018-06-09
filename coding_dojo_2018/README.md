@@ -7,14 +7,14 @@ Propõe-se neste Dojo de Programação, explorar um simulador clássico do siste
 
 Devemos utilizar a metodologia TDD (Test Driven Development) e programação em Python para comandar a tartaruga no espaço 2D.
 
-#### Comandos Úteis
+### Comandos Úteis
 
 * Compilar o Workspace e chamar testes:
 ```(bash)
   catkin build --catkin-make-args run_tests
 ```
 
-* Instruções de Execução:
+#### Instruções de Execução:
   * Parte 1
 ```(bash)
     roslaunch ros-works-dojos coding_dojo_2018_open_loop.launch

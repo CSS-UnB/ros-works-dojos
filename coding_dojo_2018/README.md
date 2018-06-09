@@ -28,14 +28,14 @@ Devemos utilizar a metodologia TDD (Test Driven Development) e programação em 
 * Parte 1: Controle em Malha Aberta (turtle_open_loop.py)
   * Entrega 1.1: Movimentação da tartaruga por coordenadas relativas
   * Entrega 1.2: Movimentação da tartaruga por coordenadas absolutas
-  * Entrega 1.3: Desenho de formas geométricas
+  * Entrega 1.3: Desenho de formas geométricas (modificar *_node.py)
     * Quadrado
     * Círculo
     * Triângulo
     
 * Parte 2: Controle em Malha Fechada (turtle_closed_loop.py)
   * Entrega 2.1: Movimentação da tartaruga por coordenadas absolutas
-  * Entrega 2.2: Desenho de formas geométricas
+  * Entrega 2.2: Desenho de formas geométricas (modificar *_node.py)
     * Quadrado
     * Círculo
     * Triângulo

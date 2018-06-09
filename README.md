@@ -2,6 +2,15 @@
 
 Bem vindos ao repositório oficial do Dojo de Programação ROS Works, promovido pelo capitulo IEEE Control Systems Society UnB.
 
+### Coding Dojo (09/06/2018)
+- Aplicar TDD (Test Driven Development)
+- Parte 1 (14h - 16h)
+    - Desenvolver funções de controle de malha aberta no simulador Turtlesim
+    - Arquivo fonte: [coding_dojo_2018/turtle\_open\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/coding_dojo_2018/turtle_open_loop.py)
+- Parte 2 (16h - 18h)    
+    - Desenvolver funções de controle de malha aberta no simulador Turtlesim
+    - Arquivo fonte: [coding_dojo_2018/turtle\_closed\_loop.py](https://github.com/CSS-UnB/ros-works-dojos/blob/master/coding_dojo_2018/turtle_closed_loop.py)
+    
 ### Processo Seletivo IEEE CSS
 - Dia 1 (25/04/2018)
     - Desenvolver funções de controle de malha aberta no simulador Turtlesim

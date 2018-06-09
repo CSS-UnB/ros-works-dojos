@@ -41,6 +41,33 @@ import math
 
 from turtle_kinematics import TurtleKinematics
 
+def moveX(x0, y0, x1, y1):
+    """
+    x0 e y0 sao a posicao atual, x1 e y1 sao a posicao final
+    """
+    v = 0
+    if x0 != x1:
+        v = 1
+    return (v, 0)
+
+def timeToX(x, vel_lin):
+    ''' Retorna tempo necessario para andar X unidades a velocidade vel_lin '''
+    return x/vel_lin
+
+def timeToY(y, vel_lin):
+    ''' Retorna tempo necessario para andar X unidades a velocidade vel_lin '''
+    return y/vel_lin
+
+def findTheta(x, y):
+    theta = math.atan2(y, x)
+    if theta < 0:
+        theta += 2*math.pi
+    return theta
+
+def timeToTurn(theta, vel_ang):
+    return theta/vel_ang
+
+
 class TurtleOpenLoop(TurtleKinematics):
     ''' Classe para o controle em malha aberta da tartaruga.'''
     def __init__(self):
@@ -53,7 +80,7 @@ class TurtleOpenLoop(TurtleKinematics):
         TurtleKinematics.__init__(self) # calls parent class constructor
 
 
-    def move_untill(self, time, vel_lin, vel_ang):
+    def move_until(self, time, vel_lin, vel_ang):
         ''' Realiza movimento durante uma quantidade de tempo definida.
         Params:
             time: tempo de movimentação.
@@ -64,7 +91,7 @@ class TurtleOpenLoop(TurtleKinematics):
         wait_time = now + time
         rate = rospy.Rate(10) # loop rate (Hz)
         while now < wait_time:
-            self.move_general(vel_lin, ang)
+            self.move_general(vel_lin, vel_ang)
             now = rospy.get_time()
             rate.sleep()
         self.stop()
@@ -78,7 +105,16 @@ class TurtleOpenLoop(TurtleKinematics):
             vel_lin: velocidade linear de movimentação
             vel_ang: velocidade angular de movimentação
         '''
-        pass
+        # t = timeToX(x, vel_lin)
+        # t1 = timeToy(y, vel_lin)
+        #self.move_general(1, 0)
+        theta = math.atan2(y, x)
+        t = timeToTurn(theta, vel_ang)
+        # Rotation
+        self.move_until(t, 0, vel_ang)
+        distance = math.sqrt(x**2 + y**2)
+        t = timeToX(distance, vel_lin)
+        self.move_until(t, vel_lin ,0)
 
     def go_to_point_absolute(self, x, y, vel_lin=0.5, vel_ang=0.5):
         ''' [Coding Dojo!]
